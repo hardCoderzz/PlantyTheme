@@ -1,9 +1,9 @@
 /*
 Theme Name: PlantyTheme
-Theme URI: https://openclassrooms.com/
+Theme URI: https://github.com/hardCoderzz/PlantyTheme
 Description: Thème Planty basé sur twentytwentyone
 Author: SoufDev
-Author URI: https://openclassrooms.com/
+Author URI: https://github.com/hardCoderzz/PlantyTheme
 Template: twentytwentyone
 Requires at least: 5.9
 Tested up to: 6.1
@@ -13,3 +13,70 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: planty
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Classe du body*/
+/* .customize-support {
+    max-width: 1440px;
+    margin: 0 auto;
+} */
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    background: #fff;
+
+}
+
+.nav-menu {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav-item a,
+.nav-menu-footer a {
+    font-family: 'syne';
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.logo {
+    width: 220px;
+    height: 22px;
+    padding: 1rem 2rem;
+}
+
+.nav-item ul {
+    display: flex;
+}
+
+.nav-item li {
+    padding: 1rem 2rem
+}
+
+.nav-item .menu-item:hover {
+    color: #fff;
+    background: #DC9F96;
+    cursor: pointer;
+}
+
+.nav-item li:hover a {
+    color: #fff;
+}
+
+.nav-menu-footer {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 1em;
+}
