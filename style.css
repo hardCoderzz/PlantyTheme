@@ -25,10 +25,10 @@ Text Domain: planty
 }
 
 /* Classe du body*/
-/* .customize-support {
+.customize-support {
     max-width: 1440px;
     margin: 0 auto;
-} */
+}
 
 .main-navigation {
     display: flex;
@@ -78,5 +78,11 @@ Text Domain: planty
     display: flex;
     justify-content: center;
     background: #fff;
-    padding: 1em;
+    padding-bottom: 0.5em;
+}
+
+/* INTRO SECTION */
+
+.elementor-heading-title {
+    color: black;
 }
