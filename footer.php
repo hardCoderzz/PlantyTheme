@@ -1,3 +1,6 @@
+        </main>
+    </div>
+</div>
 <footer>
     <?php
     wp_nav_menu ([

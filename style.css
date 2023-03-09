@@ -15,74 +15,349 @@ Text Domain: planty
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
 
 * {
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none !important;
+    box-sizing: border-box !important;
+    font-family: 'syne' !important;
+    /* margin: 0;
+    padding: 0; */
+}
+
+/* html,
+body {
+    font-family: 'syne' !important;
+} */
+
+.site-main {
+    padding: 0 !important;
+}
+
+body {
+    max-width: 100%;
+}
+
+.custom-logo {
+    width: 195px !important;
+    height: 19px !important;
     margin: 0;
-    padding: 0;
+    padding-left: 16px;
 }
 
-/* Classe du body*/
-.customize-support {
-    max-width: 1440px;
-    margin: 0 auto;
+.site-logo {
+    margin: 0 !important;
+    /* padding-block: 1rem !important; */
 }
 
-.main-navigation {
+.site-branding {
+    margin: 0 !important;
+}
+
+.site-header {
+    max-width: 100% !important;
+    /* width: 100% !important; */
     display: flex;
     justify-content: space-between;
-    padding-left: 1em;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff;
+    overflow: hidden !important;
+}
+
+/* .primary-navigation>div>.menu-wrapper {
+    max-width: 100%;
+} */
+
+/* .menu-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;
+} */
+
+.nav-item a,
+.nav-menu-footer a {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    padding-inline: 1rem !important;
+}
+
+.planty-menu-item,
+.planty-menu-item-commande {
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+}
+
+.planty-menu-item:hover {
+    background: #DC9F96 !important;
+}
+
+.planty-menu-item a:hover {
+    color: #fff !important;
+}
+
+/* .primary-navigation:hover a {
+    text-decoration-line: unset !important;
+} */
+
+.planty-menu-item-commande {
+    background: #DC9F96 !important;
+}
+
+.planty-menu-item-commande a {
+    color: #fff !important;
+}
+
+.planty-menu-item-commande a:focus,
+.planty-menu-item a:focus {
+    background: #DC9F96 !important;
+}
+
+.menu-wrapper a {
+    font-size: 1rem !important;
+}
+
+.nav-menu-footer {
+    padding-left: 0 !important;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.nav-menu-footer a {
+    display: flex;
+    justify-content: center;
     background: #fff;
 
 }
 
-.nav-menu {
-    max-width: 1440px;
-    margin: 0 auto;
+.nav-menu-footer a:focus {
+    background: none !important;
+    color: #000 !important;
 }
 
-.nav-item a,
-.nav-menu-footer a {
-    font-family: 'syne';
+/* mobile menu */
+
+@media only screen and (max-width: 781px) {
+
+
+    .site-logo .custom-logo {
+        max-width: unset !important;
+        max-height: unset !important;
+    }
+
+    .custom-logo {
+        width: 135px !important;
+        height: 13px !important;
+    }
+
+    .site-header {
+        display: flex !important;
+        justify-content: start !important;
+        height: 60px;
+    }
+
+    .site-logo {
+        /* padding: unset !important; */
+        padding-top: 12.5px !important;
+    }
+
+    .button {
+        /* padding: unset !important; */
+        padding: 0 0.75em 0 0 !important;
+    }
+
+    .menu-button-container {
+        padding-top: 1em !important;
+    }
+
+    .primary-menu-container {
+        padding-inline: unset !important;
+        margin-inline: unset !important;
+    }
+}
+
+/* Form Style */
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wpcf7-form-control {
+    width: 350px;
+}
+
+
+.wpcf7-form-control-wrap {
+    border: none !important;
+}
+
+input,
+textarea {
+    border: none !important;
+    border-radius: 7px !important;
+    margin-bottom: 10px !important;
+}
+
+/* zone texte message */
+textarea {
+    height: 320px;
+}
+
+label {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+}
+
+/* bouton formulaire Envoyer */
+.wpcf7-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DC9F96 !important;
+    padding: 9px 30px !important;
+    margin-top: 15px;
+    width: 192px;
+}
+
+.wpcf7-not-valid-tip {
+    color: #DC9F96;
+}
+
+.wpcf7-response-output {
+    border: solid 1px #DC9F96 !important;
+}
+
+/* RESPONSIVE CONTACT-FORM */
+
+@media only screen and (max-width: 480px) {
+
+    .wpcf7-form-control {
+        max-width: 280px !important;
+    }
+}
+
+
+.global-container {
+    display: flex;
+    justify-content: space-between;
+    /* flex: 1 1; */
+}
+
+.count-container p {
+    /* width: 30% */
+    box-sizing: border-box;
+}
+
+.global-container-v1 {
+    display: flex;
+    width: 50%;
+}
+
+.count-p-m-container {
+    display: flex;
+    width: 50%;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px 0 0 5px;
+    font-family: 'inter' !important;
     font-size: 1rem;
     font-weight: 400;
 }
 
-.logo {
-    width: 220px;
-    height: 22px;
-    padding: 1rem 2rem;
+.plus-minus-container {
+    width: 30px;
 }
 
-.nav-item ul {
-    display: flex;
-}
-
-.nav-item li {
-    padding: 1rem 2rem
-}
-
-.nav-item .menu-item:hover {
-    color: #fff;
+.plus,
+.minus {
+    color: white;
+    text-align: center;
     background: #DC9F96;
     cursor: pointer;
 }
 
-.nav-item li:hover a {
+.plus {
+    border-bottom: 1px solid #fff;
+    border-top-right-radius: 5px;
+}
+
+.minus {
+    border-bottom-right-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    width: 50%;
+}
+
+.order-btn {
+    border: none;
+    height: 100%;
+    background: #E0B9B4 !important;
+    border-radius: 5px;
+    padding-inline: 30%;
+
+}
+
+.order-btn:hover {
     color: #fff;
 }
 
-.nav-menu-footer {
+/* Formulaire de commande */
+
+.form-container {
     display: flex;
     justify-content: center;
-    background: #fff;
-    padding-bottom: 0.5em;
+    column-gap: 8%;
+
 }
 
-/* INTRO SECTION */
+div .separateur {
+    width: 11px !important;
+    background: #7a0c0c !important;
+    z-index: 999;
+}
 
-.elementor-heading-title {
-    color: black;
+.form-container label {
+    font-family: 'syne';
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.info-client,
+.info-livraison {
+    font-family: 'syne' !important;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn-commande {
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 481px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 10%;
+
+    }
 }
