@@ -17,21 +17,19 @@ Text Domain: planty
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-
-
 * {
     text-decoration: none !important;
     list-style: none !important;
     box-sizing: border-box !important;
-    font-family: 'syne' !important;
+    /*font-family: 'syne' !important;
     /* margin: 0;
     padding: 0; */
 }
 
-/* html,
+html,
 body {
     font-family: 'syne' !important;
-} */
+}
 
 .site-main {
     padding: 0 !important;
@@ -50,7 +48,6 @@ body {
 
 .site-logo {
     margin: 0 !important;
-    /* padding-block: 1rem !important; */
 }
 
 .site-branding {
@@ -59,7 +56,6 @@ body {
 
 .site-header {
     max-width: 100% !important;
-    /* width: 100% !important; */
     display: flex;
     justify-content: space-between;
     margin: 0 !important;
@@ -68,45 +64,30 @@ body {
     overflow: hidden !important;
 }
 
-/* .primary-navigation>div>.menu-wrapper {
-    max-width: 100%;
-} */
-
-/* .menu-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 !important;
-    padding: 0 !important;
-} */
-
-.nav-item a,
+.menu-wrapper a,
 .nav-menu-footer a {
+    font-family: 'syne' !important;
     font-weight: 400 !important;
     font-size: 1rem !important;
     padding-inline: 1rem !important;
 }
 
 .planty-menu-item,
-.planty-menu-item-commande {
+.planty-menu-item-commande,
+.admin-item {
     padding-block: 0.5rem;
     padding-inline: 2rem;
 }
 
-.planty-menu-item:hover {
-    background: #DC9F96 !important;
-}
-
-.planty-menu-item a:hover {
-    color: #fff !important;
-}
-
-/* .primary-navigation:hover a {
-    text-decoration-line: unset !important;
-} */
-
+.planty-menu-item:hover,
+.admin-item:hover,
 .planty-menu-item-commande {
     background: #DC9F96 !important;
+}
+
+.planty-menu-item:hover a,
+.admin-item:hover a {
+    color: #fff !important;
 }
 
 .planty-menu-item-commande a {
@@ -114,8 +95,9 @@ body {
 }
 
 .planty-menu-item-commande a:focus,
-.planty-menu-item a:focus {
-    background: #DC9F96 !important;
+.planty-menu-item a:focus,
+.admin-item a:focus {
+    background: none !important;
 }
 
 .menu-wrapper a {
@@ -140,9 +122,13 @@ body {
     color: #000 !important;
 }
 
+.nav-menu-footer .admin-item {
+    display: none;
+}
+
 /* mobile menu */
 
-@media only screen and (max-width: 781px) {
+@media only screen and (max-width: 482px) {
 
 
     .site-logo .custom-logo {
@@ -161,11 +147,6 @@ body {
         height: 60px;
     }
 
-    .site-logo {
-        /* padding: unset !important; */
-        padding-top: 12.5px !important;
-    }
-
     .button {
         /* padding: unset !important; */
         padding: 0 0.75em 0 0 !important;
@@ -180,6 +161,22 @@ body {
         margin-inline: unset !important;
     }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 707px) {
+
+    .custom-logo {
+        width: 135px !important;
+        height: 13px !important;
+    }
+
+    .planty-menu-item,
+    .planty-menu-item-commande,
+    .admin-item {
+        padding-block: 0.5em;
+        padding-inline: 0;
+    }
+}
+
 
 /* Form Style */
 
@@ -216,7 +213,7 @@ label {
 }
 
 /* bouton formulaire Envoyer */
-.wpcf7-submit {
+.btn-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,6 +221,11 @@ label {
     padding: 9px 30px !important;
     margin-top: 15px;
     width: 192px;
+}
+
+.btn-form:hover {
+    background: #DC9F96 !important;
+    color: #fff !important;
 }
 
 .wpcf7-not-valid-tip {
@@ -243,26 +245,22 @@ label {
     }
 }
 
-
 .global-container {
     display: flex;
     justify-content: space-between;
+    /* width: fit-content; */
     /* flex: 1 1; */
 }
 
 .count-container p {
     /* width: 30% */
-    box-sizing: border-box;
-}
-
-.global-container-v1 {
-    display: flex;
-    width: 50%;
+    /* box-sizing: border-box; */
 }
 
 .count-p-m-container {
     display: flex;
-    width: 50%;
+    justify-content: space-between;
+
 }
 
 .counter {
@@ -299,21 +297,23 @@ label {
     border-bottom-right-radius: 5px;
 }
 
-.button-container {
+/* .button-container {
     display: flex;
     width: 50%;
-}
+} */
 
 .order-btn {
-    border: none;
+
+    border: 3px solid #E0B9B4 !important;
     height: 100%;
     background: #E0B9B4 !important;
     border-radius: 5px;
-    padding-inline: 30%;
+    padding-inline: 1.5em;
 
 }
 
 .order-btn:hover {
+    border: 3px solid #E0B9B4 !important;
     color: #fff;
 }
 
@@ -326,10 +326,20 @@ label {
 
 }
 
-div .separateur {
-    width: 11px !important;
-    background: #7a0c0c !important;
-    z-index: 999;
+@media only screen and (min-width: 435px) and (max-width: 767px) {
+    .global-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .count-p-m-container {}
+
+}
+
+/* Séparateur formulaire de commande */
+.colonne-gauche {
+    border-right: 1px #fff solid;
+    padding-right: 60px;
 }
 
 .form-container label {
@@ -348,16 +358,54 @@ div .separateur {
 }
 
 .btn-commande {
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 60px;
+    background: #DC9F96 !important;
+    color: #fff !important;
+    padding-inline: 2em !important;
 }
 
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 850px) {
+
     .form-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         column-gap: 10%;
-
     }
+
+    .colonne-gauche {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .info-livraison {
+        margin-top: 30px;
+    }
+
+    .btn-commande {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
+
+/* @media only screen and (min-width: 482px) and (max-width: 850px) {
+
+    .colonne-gauche,
+    .colonne-droite {
+        max-width: 350px;
+    }
+
+    .colonne-gauche {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-right: none;
+    }
+
+    .colonne-droite {
+        padding-right: 15px;
+    }
+} */
