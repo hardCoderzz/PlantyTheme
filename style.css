@@ -148,7 +148,6 @@ body {
     }
 
     .button {
-        /* padding: unset !important; */
         padding: 0 0.75em 0 0 !important;
     }
 
@@ -162,11 +161,11 @@ body {
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 707px) {
+@media only screen and (min-width: 482px) and (max-width: 768px) {
 
     .custom-logo {
-        width: 135px !important;
-        height: 13px !important;
+        width: 145px !important;
+        height: 14px !important;
     }
 
     .planty-menu-item,
@@ -326,14 +325,29 @@ label {
 
 }
 
-@media only screen and (min-width: 435px) and (max-width: 767px) {
+@media only screen and (min-width: 436px) and (max-width: 767px) {
     .global-container {
         display: flex;
-        justify-content: space-evenly;
+        max-width: 393px;
+        margin: auto;
     }
 
-    .count-p-m-container {}
+    .order-btn {
+        padding-inline: 6em;
+    }
+}
 
+@media only screen and (max-width: 435px) {
+    .global-container {
+        display: flex;
+        max-width: 393px !important;
+        margin: auto !important;
+    }
+
+    .order-btn {
+        padding-inline: 4em;
+
+    }
 }
 
 /* Séparateur formulaire de commande */
