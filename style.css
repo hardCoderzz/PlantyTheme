@@ -21,9 +21,6 @@ Text Domain: planty
     text-decoration: none !important;
     list-style: none !important;
     box-sizing: border-box !important;
-    /*font-family: 'syne' !important;
-    /* margin: 0;
-    padding: 0; */
 }
 
 html,
@@ -97,13 +94,20 @@ body {
 .planty-menu-item-commande a:focus,
 .planty-menu-item a:focus,
 .admin-item a:focus {
-    background: none !important;
+    background: #DC9F96 !important;
+}
+
+.planty-menu-item:focus-within,
+.admin-item:focus-within {
+    background: #DC9F96 !important;
 }
 
 .menu-wrapper a {
     font-size: 1rem !important;
 }
 
+
+/* FOOTER */
 .nav-menu-footer {
     padding-left: 0 !important;
     padding-bottom: 10px;
@@ -114,7 +118,6 @@ body {
     display: flex;
     justify-content: center;
     background: #fff;
-
 }
 
 .nav-menu-footer a:focus {
@@ -176,7 +179,6 @@ body {
     }
 }
 
-
 /* Form Style */
 
 .wpcf7-form {
@@ -201,7 +203,7 @@ textarea {
     margin-bottom: 10px !important;
 }
 
-/* zone texte message */
+/* zone texte message formulaire */
 textarea {
     height: 320px;
 }
@@ -244,16 +246,11 @@ label {
     }
 }
 
+/* Gestion quantité commande */
+
 .global-container {
     display: flex;
     justify-content: space-between;
-    /* width: fit-content; */
-    /* flex: 1 1; */
-}
-
-.count-container p {
-    /* width: 30% */
-    /* box-sizing: border-box; */
 }
 
 .count-p-m-container {
@@ -295,11 +292,6 @@ label {
 .minus {
     border-bottom-right-radius: 5px;
 }
-
-/* .button-container {
-    display: flex;
-    width: 50%;
-} */
 
 .order-btn {
 
@@ -405,21 +397,3 @@ label {
     }
 
 }
-
-/* @media only screen and (min-width: 482px) and (max-width: 850px) {
-
-    .colonne-gauche,
-    .colonne-droite {
-        max-width: 350px;
-    }
-
-    .colonne-gauche {
-        padding-left: 10px;
-        padding-right: 10px;
-        border-right: none;
-    }
-
-    .colonne-droite {
-        padding-right: 15px;
-    }
-} */
