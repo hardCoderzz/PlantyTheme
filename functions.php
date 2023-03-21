@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_style');
 // FONCTION POUR AJOUTER LE LIEN ADMIN AU MENU
 function add_admin_link_to_menu( $items, $args ) {
     
-    if ( is_user_logged_in() ) {
+    if ( is_user_logged_in() && $args->theme_location === 'primary' ) {
 
         $dashboard_url = admin_url();
         

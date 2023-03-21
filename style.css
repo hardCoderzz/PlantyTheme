@@ -66,46 +66,59 @@ body {
     font-family: 'syne' !important;
     font-weight: 400 !important;
     font-size: 1rem !important;
-    padding-inline: 1rem !important;
 }
 
-.planty-menu-item,
+/* Correction bug de transition qd passage à 481px */
+.primary-menu-container {
+    transition: none !important;
+}
+
+/* .planty-menu-item, */
 .planty-menu-item-commande,
 .admin-item {
+    padding-block: 0.5rem !important;
+    padding-inline: 1.125rem !important;
+}
+
+.planty-menu-item {
+
     padding-block: 0.5rem;
-    padding-inline: 2rem;
 }
 
-.planty-menu-item:hover,
-.admin-item:hover,
-.planty-menu-item-commande {
-    background: #DC9F96 !important;
+.primary-navigation .primary-menu-container>ul>.menu-item>a {
+    padding-left: unset !important;
+    padding-right: unset !important;
 }
 
-.planty-menu-item:hover a,
-.admin-item:hover a {
-    color: #fff !important;
+.planty-menu-item a:hover,
+.admin-item a:hover,
+.planty-menu-item a:focus,
+.admin-item a:focus,
+.planty-menu-item:focus-within,
+.admin-item:focus-within {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.planty-menu-item a:focus,
+.admin-item a:focus {
+    background: none !important;
+    color: #000 !important;
 }
 
 .planty-menu-item-commande a {
     color: #fff !important;
+    font-weight: 700 !important;
+}
+
+.planty-menu-item-commande {
+    background: #DC9F96 !important;
 }
 
 .planty-menu-item-commande a:focus,
-.planty-menu-item a:focus,
-.admin-item a:focus {
-    background: #DC9F96 !important;
+.planty-menu-item-commande:hover {
+    background: #C02E44 !important;
 }
-
-.planty-menu-item:focus-within,
-.admin-item:focus-within {
-    background: #DC9F96 !important;
-}
-
-.menu-wrapper a {
-    font-size: 1rem !important;
-}
-
 
 /* FOOTER */
 .nav-menu-footer {
@@ -125,14 +138,9 @@ body {
     color: #000 !important;
 }
 
-.nav-menu-footer .admin-item {
-    display: none;
-}
+/* MOBILE MENU */
 
-/* mobile menu */
-
-@media only screen and (max-width: 482px) {
-
+@media only screen and (max-width: 481px) {
 
     .site-logo .custom-logo {
         max-width: unset !important;
@@ -162,20 +170,18 @@ body {
         padding-inline: unset !important;
         margin-inline: unset !important;
     }
+
+    .planty-menu-item {
+        padding-left: 1rem;
+    }
+
 }
 
 @media only screen and (min-width: 482px) and (max-width: 768px) {
 
     .custom-logo {
-        width: 145px !important;
-        height: 14px !important;
-    }
-
-    .planty-menu-item,
-    .planty-menu-item-commande,
-    .admin-item {
-        padding-block: 0.5em;
-        padding-inline: 0;
+        width: 135px !important;
+        height: 13px !important;
     }
 }
 
@@ -219,13 +225,13 @@ label {
     justify-content: center;
     align-items: center;
     background: #DC9F96 !important;
-    padding: 9px 30px !important;
     margin-top: 15px;
     width: 192px;
 }
 
-.btn-form:hover {
-    background: #DC9F96 !important;
+.btn-form:hover,
+.btn-commande:hover {
+    background: #C02E44 !important;
     color: #fff !important;
 }
 
@@ -246,7 +252,7 @@ label {
     }
 }
 
-/* Gestion quantité commande */
+/* SECTION QUANTITE COMMANDE */
 
 .global-container {
     display: flex;
@@ -256,7 +262,6 @@ label {
 .count-p-m-container {
     display: flex;
     justify-content: space-between;
-
 }
 
 .counter {
@@ -294,18 +299,30 @@ label {
 }
 
 .order-btn {
-
     border: 3px solid #E0B9B4 !important;
     height: 100%;
     background: #E0B9B4 !important;
     border-radius: 5px;
     padding-inline: 1.5em;
-
 }
 
 .order-btn:hover {
-    border: 3px solid #E0B9B4 !important;
+    border: 3px solid #C02E44 !important;
     color: #fff;
+    background: #C02E44 !important;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 590px) {
+
+    .wpcf7 form .wpcf7-response-output {
+        width: 280px;
+    }
 }
 
 /* Formulaire de commande */
@@ -314,7 +331,6 @@ label {
     display: flex;
     justify-content: center;
     column-gap: 8%;
-
 }
 
 @media only screen and (min-width: 436px) and (max-width: 767px) {
@@ -338,7 +354,6 @@ label {
 
     .order-btn {
         padding-inline: 4em;
-
     }
 }
 
