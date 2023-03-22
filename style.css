@@ -76,13 +76,13 @@ body {
 /* .planty-menu-item, */
 .planty-menu-item-commande,
 .admin-item {
-    padding-block: 0.5rem !important;
-    padding-inline: 1.125rem !important;
+    padding-block: 0.5em !important;
+    padding-inline: 1.125em !important;
+    margin-left: 1em !important;
 }
 
 .planty-menu-item {
-
-    padding-block: 0.5rem;
+    padding-block: 0.5em;
 }
 
 .primary-navigation .primary-menu-container>ul>.menu-item>a {
@@ -116,7 +116,8 @@ body {
 }
 
 .planty-menu-item-commande a:focus,
-.planty-menu-item-commande:hover {
+.planty-menu-item-commande:hover,
+.planty-menu-item-commande:focus-within {
     background: #C02E44 !important;
 }
 
@@ -172,7 +173,7 @@ body {
     }
 
     .planty-menu-item {
-        padding-left: 1rem;
+        padding-left: 1em;
     }
 
 }
@@ -182,6 +183,14 @@ body {
     .custom-logo {
         width: 135px !important;
         height: 13px !important;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 565px) {
+
+    .planty-menu-item-commande,
+    .admin-item {
+        margin-left: 0 !important;
     }
 }
 
@@ -385,7 +394,6 @@ label {
     color: #fff !important;
     padding-inline: 2em !important;
 }
-
 
 @media only screen and (max-width: 850px) {
 
