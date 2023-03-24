@@ -36,6 +36,8 @@ body {
     max-width: 100%;
 }
 
+/* MENU */
+
 .custom-logo {
     width: 195px !important;
     height: 19px !important;
@@ -139,6 +141,12 @@ body {
     color: #000 !important;
 }
 
+/* Bouton COMMANDER home page */
+.elementor-54 .elementor-element.elementor-element-afdd61a .elementor-button:focus-within {
+    background: #C02E44 !important;
+}
+
+
 /* MOBILE MENU */
 
 @media only screen and (max-width: 481px) {
@@ -176,6 +184,11 @@ body {
         padding-left: 1em;
     }
 
+    .planty-menu-item-commande,
+    .admin-item {
+        margin-left: 0 !important;
+    }
+
 }
 
 @media only screen and (min-width: 482px) and (max-width: 768px) {
@@ -194,7 +207,7 @@ body {
     }
 }
 
-/* Form Style */
+/* CONTACT FORM  */
 
 .wpcf7-form {
     display: flex;
@@ -323,8 +336,6 @@ label {
 
 .wpcf7 form .wpcf7-response-output {
     width: max-content;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 590px) {
