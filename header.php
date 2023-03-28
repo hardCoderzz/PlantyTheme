@@ -16,7 +16,6 @@ $wrapper_classes  = 'site-header';
 $wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
 $wrapper_classes .= ( true === get_theme_mod( 'display_title_and_tagline', true ) ) ? ' has-title-and-tagline' : '';
 $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
-$wrapper_classes .= 'planty-header';
 ?>
 
 
