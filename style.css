@@ -281,9 +281,21 @@ label {
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 767px) {
+    .global-container {
+        display: flex;
+        max-width: 393px;
+        margin: auto;
+    }
+
+    .order-btn {
+        padding-inline: 6em;
+    }
+}
+
+
 .count-p-m-container {
     display: flex;
-    justify-content: space-between;
 }
 
 .counter {
@@ -338,14 +350,14 @@ label {
     width: max-content;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 590px) {
+@media only screen and (max-width: 650px) {
 
     .wpcf7 form .wpcf7-response-output {
         width: 280px;
     }
 }
 
-/* Formulaire de commande */
+/* SECTION FORMULAIRE DE COMMANDE */
 
 .form-container {
     display: flex;
@@ -353,25 +365,7 @@ label {
     column-gap: 8%;
 }
 
-@media only screen and (min-width: 436px) and (max-width: 767px) {
-    .global-container {
-        display: flex;
-        max-width: 393px;
-        margin: auto;
-    }
-
-    .order-btn {
-        padding-inline: 6em;
-    }
-}
-
 @media only screen and (max-width: 435px) {
-    .global-container {
-        display: flex;
-        max-width: 393px !important;
-        margin: auto !important;
-    }
-
     .order-btn {
         padding-inline: 4em;
     }
@@ -380,7 +374,7 @@ label {
 /* Séparateur formulaire de commande */
 .colonne-gauche {
     border-right: 1px #fff solid;
-    padding-right: 60px;
+    padding-right: 8%;
 }
 
 .form-container label {
@@ -431,3 +425,18 @@ label {
     }
 
 }
+
+/* Spinner */
+
+.wpcf7-spinner {
+    background: #C02E44;
+    width: 48px;
+    height: 48px;
+}
+
+.wpcf7-spinner::before {
+    width: 12px;
+    height: 12px;
+}
+
+.
