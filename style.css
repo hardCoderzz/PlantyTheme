@@ -283,7 +283,6 @@ label {
 
 @media only screen and (max-width: 767px) {
     .global-container {
-        display: flex;
         max-width: 393px;
         margin: auto;
     }
@@ -438,5 +437,3 @@ label {
     width: 12px;
     height: 12px;
 }
-
-.
